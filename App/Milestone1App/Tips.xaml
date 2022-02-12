@@ -1,0 +1,20 @@
+﻿<Window x:Class="YelpApp.Tips"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YelpApp"
+        mc:Ignorable="d"
+        Title="Tips by Users" Height="825" Width="943">
+    <Grid Background="#FFADC3F5">
+        <Border BorderBrush="Black" BorderThickness="1.5" HorizontalAlignment="Left" Height="122" Margin="26,667,0,0" VerticalAlignment="Top" Width="807"/>
+        <Border BorderBrush="Black" BorderThickness="1.5" HorizontalAlignment="Left" Height="534" Margin="26,86,0,0" VerticalAlignment="Top" Width="807"/>
+        <TextBox x:Name="newTipText" HorizontalAlignment="Left" Height="56" Margin="35,10,0,0" TextWrapping="Wrap" Text="Add new tip here!" VerticalAlignment="Top" Width="789"/>
+        <Label Content="Business Tips" HorizontalAlignment="Left" Margin="35,71,0,0" VerticalAlignment="Top" Background="#FFADC3F5"/>
+        <DataGrid x:Name="businessTipsTable" HorizontalAlignment="Left" Height="515" Margin="35,97,0,0" VerticalAlignment="Top" Width="789"/>
+        <Button x:Name="tipButton" Content="Add Tip" HorizontalAlignment="Left" Margin="840,10,0,0" VerticalAlignment="Top" Width="75" Height="56" Click="tipButton_Click"/>
+        <Button x:Name="likeButton" Content="Like" HorizontalAlignment="Left" Margin="840,97,0,0" VerticalAlignment="Top" Width="75" Height="56" Click="likeButton_Click"/>
+        <Label Content="Friends who reviewed this business" HorizontalAlignment="Left" Margin="35,651,0,0" VerticalAlignment="Top" Background="#FFADC3F5"/>
+        <DataGrid x:Name="friendsTipsTable" HorizontalAlignment="Left" Height="100" Margin="35,682,0,0" VerticalAlignment="Top" Width="789"/>
+    </Grid>
+</Window>

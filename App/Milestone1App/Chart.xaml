@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YelpApp"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="YelpApp.Chart"
+        mc:Ignorable="d"
+        Title="Chart" Height="540" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="773*"/>
+            <ColumnDefinition Width="120*"/>
+        </Grid.ColumnDefinitions>
+
+        <chartingToolkit:Chart x:Name="myChart" Title ="Number of Check-ins per Month" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="480" Width="750">
+            <chartingToolkit:ColumnSeries x:Name="My_Data" HorizontalAlignment="Left" Height="444" VerticalAlignment="Top" Width="558" 
+                                          Title="# of Check-ins" DependentValuePath="Value" IndependentValuePath="Key" ItemsSource="{Binding}"/>
+        </chartingToolkit:Chart>
+        <Button x:Name="addCheckInButton" Content="Check-In" HorizontalAlignment="Left" Margin="0.65,38,0,0" VerticalAlignment="Top" Width="100" Height="65" Click="addCheckInButton_Click" Grid.Column="1"/>
+
+    </Grid>
+</Window>
